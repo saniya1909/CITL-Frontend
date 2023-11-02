@@ -1,6 +1,7 @@
 import React from 'react';
 import "../styles/RegisterStyles.css";
 import RegisterRightLogo from "../images/register-right-logo.png";
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   return (
@@ -15,6 +16,7 @@ const Register = () => {
                         <button type='button'>Sign In</button>
                     </form>
                 </div>
+                <Link to="/register">Register Here</Link>
             </div>
         </div>
         <div className='register-right-image'>
