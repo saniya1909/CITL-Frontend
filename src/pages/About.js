@@ -1,10 +1,12 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
 import { Box, Typography } from "@mui/material";
+import background from "../images/background.jpg";
 
 const About = () => {
   return (
     <Layout>
+       <div className="home" style={{ backgroundImage: `url(${background})`, maxHeight:"92vh" }}>
       <Box
         sx={{
           my: 15,
@@ -54,6 +56,7 @@ const About = () => {
 
         </p>
       </Box>
+    </div>
     </Layout>
   );
 };
