@@ -15,7 +15,7 @@ const About = () => {
           "& h4": {
             fontWeight: "bold",
             my: 2,
-            fontSize: "3rem",
+            fontSize: "2.5rem",
           },
           "& p": {
             textAlign: "justify",
@@ -28,7 +28,9 @@ const About = () => {
           },
         }}
       >
-        <Typography variant="h4">Welcome To Getaway!!</Typography>
+        <div style={{backdropFilter:"blur(1.8px)", alignItems:"center", justifyContent:"center", display:"flex", flexDirection:"column", height:"400px"}}>
+        <Typography variant="h4" sx={{color:"black", width:"100%"}}>Welcome To Getaway!!</Typography>
+        <div style={{width:"70%", alignItems:"center"}}>
         <p>
         Getaway is more than just a travel website; it's your passport to
         unforgettable experiences. At Getaway, we believe in the power of 
@@ -55,6 +57,8 @@ const About = () => {
         touch, inviting readers to be part of something truly special. Well done!
 
         </p>
+        </div>
+        </div>
       </Box>
     </div>
     </Layout>
