@@ -21,8 +21,8 @@ const Contact = () => {
     <Layout>
       <div className="home" style={{ backgroundImage: `url(${background})`, maxHeight:"92vh" }}>
 
-      <Box sx={{ my: 5, ml: 10, "& h4": { color:"red",fontWeight: "bold", mb: 4 } }}>
-        <Typography variant="h4">Contact Our Iternery Management Team</Typography>
+      <Box sx={{ my: 5, ml: 10, "& h4": { color:"red",fontWeight: "bold", mb: 4, backdropFilter:"blur(1.8px)" } }}>
+        <Typography variant="h4">Contact Our Itinerary Management Team</Typography>
         <p>
         "Unlock the world of seamless travel, where every destination is
          an experience waiting to be explored.<br/>
