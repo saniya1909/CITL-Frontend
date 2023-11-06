@@ -6,16 +6,16 @@ import background from "../images/background.jpg";
 const About = () => {
   return (
     <Layout>
-       <div className="home" style={{ backgroundImage: `url(${background})`, maxHeight:"92vh" }}>
+       <div className="home" style={{ backgroundImage: `url(${background})`, maxHeight:"91vh" }}>
       <Box
         sx={{
-          my: 15,
+          my: 16,
           textAlign: "center",
           p: 2,
           "& h4": {
             fontWeight: "bold",
             my: 2,
-            fontSize: "2rem",
+            fontSize: "3rem",
           },
           "& p": {
             textAlign: "justify",
@@ -23,7 +23,7 @@ const About = () => {
           "@media (max-width:600px)": {
             mt: 0,
             "& h4 ": {
-              fontSize: "1.5rem",
+              fontSize: "3.5rem",
             },
           },
         }}
