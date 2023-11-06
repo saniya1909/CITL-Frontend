@@ -3,6 +3,7 @@ import Layout from "./../components/Layout/Layout";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import MailIcon from "@mui/icons-material/Mail";
 import CallIcon from "@mui/icons-material/Call";
+import background from "../images/background.jpg";
 import {
   Box,
   Paper,
@@ -18,7 +19,9 @@ import {
 const Contact = () => {
   return (
     <Layout>
-      <Box sx={{ my: 5, ml: 10, "& h4": { fontWeight: "bold", mb: 2 } }}>
+      <div className="home" style={{ backgroundImage: `url(${background})`, maxHeight:"92vh" }}>
+
+      <Box sx={{ my: 5, ml: 10, "& h4": { color:"red",fontWeight: "bold", mb: 4 } }}>
         <Typography variant="h4">Contact Our Iternery Management Team</Typography>
         <p>
         "Unlock the world of seamless travel, where every destination is
@@ -30,13 +33,13 @@ const Contact = () => {
       <Box
         sx={{
           m: 3,
-          width: "600px",
+          width: "500px",
           ml: 10,
-          "@media (max-width:600px)": {
+          "@media (max-width:500px)": {
             width: "300px",
           },
         }}
-      >
+        >
         <TableContainer component={Paper}>
           <Table aria-label="contact table">
             <TableHead>
@@ -44,7 +47,7 @@ const Contact = () => {
                 <TableCell
                   sx={{ bgcolor: "black", color: "white" }}
                   align="center"
-                >
+                  >
                   Contact Details
                 </TableCell>
               </TableRow>
@@ -70,6 +73,7 @@ const Contact = () => {
           </Table>
         </TableContainer>
       </Box>
+     </div>
     </Layout>
   );
 };
