@@ -1,2 +1,1 @@
-# Reactjs-MaterialUI-Resturant-website
-Complete Reactjs Resturant Website 
+# Getaway-Travel-Website-Frontend
