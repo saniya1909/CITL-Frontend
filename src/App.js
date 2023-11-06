@@ -4,7 +4,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Tour from "./pages/Tour";
 import Pagenotfound from "./pages/Pagenotfound";
-import Register from "./pages/Register";
+import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Tour" element={<Tour />} />
-          <Route path="/login" element={<Register />} />
+          <Route path="/login" element={<LoginPage/>} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="*" element={<Pagenotfound />} />
         </Routes>

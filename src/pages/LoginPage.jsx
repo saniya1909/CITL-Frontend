@@ -1,10 +1,10 @@
 import React from 'react';
 import "../styles/RegisterStyles.css";
-
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Login from '../images/login.jpg'
 
-const Register = () => {
+const LoginPage = () => {
   return (
     <div className='main-register-page'>
         <div className='register-form'>
@@ -31,4 +31,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default LoginPage;
