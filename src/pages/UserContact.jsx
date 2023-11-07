@@ -1,10 +1,9 @@
 import React from "react";
-import Layout from "../components/Layout/Layout";
+import UserLayout from "../components/Layout/UserLayout";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import MailIcon from "@mui/icons-material/Mail";
 import CallIcon from "@mui/icons-material/Call";
 import background from "../images/background.jpg";
-import "../styles/ContactStyles.css";
 import {
   Box,
   Paper,
@@ -19,7 +18,7 @@ import {
 
 const Contact = () => {
   return (
-    <Layout>
+    <UserLayout>
       <div className="home" style={{ backgroundImage: `url(${background})`, maxHeight:"92vh" }}>
 
       <Box
@@ -90,7 +89,7 @@ const Contact = () => {
         </TableContainer>
       </Box>
      </div>
-    </Layout>
+    </UserLayout>
   );
 };
 

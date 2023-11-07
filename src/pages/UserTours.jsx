@@ -1,6 +1,6 @@
 import React from "react";
 import { CityList } from "../data/data";
-import Layout from "../components/Layout/Layout";
+import UserLayout from "../components/Layout/UserLayout";
 import {
   Box,
   Card,
@@ -12,7 +12,7 @@ import {
 
 const Tour = () => {
   return (
-    <Layout>
+    <UserLayout>
       <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {CityList.map((city) => (
           <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }}>
@@ -33,7 +33,7 @@ const Tour = () => {
           </Card>
         ))}
       </Box>
-    </Layout>
+    </UserLayout>
   );
 };
 

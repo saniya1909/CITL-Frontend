@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout/Layout";
+import UserLayout from "../components/Layout/UserLayout";
 import { Box, Typography } from "@mui/material";
 import background from "../images/background.jpg";
 
 const About = () => {
   return (
-    <Layout>
+    <UserLayout>
        <div className="home" style={{ backgroundImage: `url(${background})`, maxHeight:"91vh" }}>
       <Box
         sx={{
@@ -75,7 +75,7 @@ const About = () => {
         </div>
       </Box>
     </div>
-    </Layout>
+    </UserLayout>
   );
 };
 

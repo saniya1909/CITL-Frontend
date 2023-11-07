@@ -1,19 +1,19 @@
-import India from "../images/India.jpg";
+import Agra from "../images/India.jpg";
 import Goa from "../images/Goa.jpg";
 import Paris from "../images/Paris.jpg";
 import Canada from "../images/Canada.jpg";
 import Bali from "../images/Bali.jpg";
 import China from "../images/China.jpg";
-import Australia from "../images/Australia.jpg"
+import Manali from "../images/Australia.jpg"
 import Singapore from "../images/Singapore.jpg"
 import Japan from "../images/Japan.jpg"
 
-export const MenuList = [
+export const CityList = [
   {
-    name: "India",
+    name: "Agra",
     description:
       "There are three trips you take to India: the one you think you're going to have-that you plan for; the one you actually have; and the one you live through once you go back Home.",
-    image: India,
+    image: Agra,
     price: 200,
   },
   {
@@ -31,9 +31,9 @@ export const MenuList = [
     price: 300,
   },
   {
-    name: "Canada",
+    name: "Toronto",
     description:
-      "Canada is a land of endless possibilities and boundless dreams.lets your journey begin.Step into the land of maple leaves and friendly faces, where you'll find a true sense of belonging.",
+      "Toronto is a land of endless possibilities and boundless dreams.lets your journey begin.Step into the land of maple leaves and friendly faces, where you'll find a true sense of belonging.",
     image: Canada,
     price: 100,
   },
@@ -45,17 +45,17 @@ export const MenuList = [
     price: 400,
   },
   {
-    name: "China",
+    name: "Bejing",
     description:
-      " China is that it is the most populous country in the world. Besides being a densely populated country, it also has well-preserved historical places, exotic natural beauty, and unique flora and fauna.",
+      " Bejing is that it is the most populous country in the world. Besides being a densely populated country, it also has well-preserved historical places, exotic natural beauty, and unique flora and fauna.",
     image: China,
     price: 500,
   },
   {
-    name: "Australia",
+    name: "Manali",
     description:
-       "Everyone knows how much Australia means to me. I try to get back here as much as I can, but normally it’s for work, so I’m in and out and jetlagged and stressed.",
-    image: Australia,
+       "Everyone knows how much Manali means to Us. I try to get back here as much as I can, but normally it’s for work, so I’m in and out and jetlagged and stressed.",
+    image: Manali,
     price: 36000,
   },
   {
@@ -66,7 +66,7 @@ export const MenuList = [
     price: 40000,
   },
   {
-    name: "Japan",
+    name: "Tokyo",
     description:
       "This Japanese proverb teaches the value of patience. Sitting on a rock for a long time makes it warm. Even if it takes a long time, good results will come!",
     image: Japan,

@@ -1,0 +1,13 @@
+.paragraph-container {
+    background-color: white; /* Set background color to white */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a lifted effect */
+    width: fit-content;
+}
+  
+  .custom-paragraph {
+    font-size: 18px; /* Set font size */
+    line-height: 1.5; /* Set line height for readability */
+    color: #333; /* Set text color */
+  }

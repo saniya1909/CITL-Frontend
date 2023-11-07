@@ -39,7 +39,7 @@ const Footer = () => {
             },
           }}
         >
-          All Rights Reserved &copy; Techinfo YT
+          All Rights Reserved &copy; Getaway:Kunal and Saniya
         </Typography>
       </Box>
     </>
