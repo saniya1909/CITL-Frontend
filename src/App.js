@@ -12,6 +12,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import UserDashboard from "./pages/UserDashboard"; // Import UserDashboard component
 import AdminDashboard from "./pages/AdminDashboard"; // Import AdminDashboard component
+import Package from "./pages/Package";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/user-dashboard" element={<UserDashboard />} />
           <Route path="/user-dashboard/Tour" element={<UserTour/>} />
+          <Route path="/user-dashboard/Tour/package" element={<Package />} />
           <Route path="/user-dashboard/about" element={<UserAbout/>} />
           <Route path="/user-dashboard/contact" element={<UserContact/>} />
           <Route path="/user-dashboard/user-profile" element={<UserProfile/>} />

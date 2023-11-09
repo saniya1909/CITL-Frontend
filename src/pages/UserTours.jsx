@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CityList } from "../data/data";
 import UserLayout from "../components/Layout/UserLayout";
 import {
@@ -9,13 +9,25 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import {Link, useNavigate} from "react-router-dom";
 
 const Tour = () => {
+
+  const navigate = useNavigate();
+
+  // const [cityName, setCityName] = useState("");
+
+  const handlePageChange = () => {
+    console.log("Hello World");
+    // localStorage.setItem('cityName', city.name);
+    navigate("/user-dashboard/Tour/package");
+  }
+
   return (
     <UserLayout>
       <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {CityList.map((city) => (
-          <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }}>
+          <Card onClick={handlePageChange} sx={{ maxWidth: "390px", display: "flex", m: 2 }}>
             <CardActionArea>
               <CardMedia
                 sx={{ minHeight: "400px" }}

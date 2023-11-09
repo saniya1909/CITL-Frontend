@@ -25,14 +25,9 @@ const LoginPage = () => {
         email,
         password
       });
-
-      // Assuming the API response contains a user object and an access token
-      const { user, token } = response.data;
-
-      // Save the token to localStorage for future requests
-      localStorage.setItem('accessToken', token);
-      alert('User Succesfully Logged in');
-      // Handle successful login, e.g., redirect to the user dashboard
+      const { user } = response.data;
+      localStorage.setItem('Email', email);
+      alert('User Successfully Logged in');
       console.log('User logged in successfully:', user);
       navigate('/user-dashboard'); // Redirect to dashboard after login
     } catch (error) {

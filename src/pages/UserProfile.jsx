@@ -9,22 +9,24 @@ const UserProfile = () => {
 
   useEffect(() => {
     // Fetch user data
-    axios.get('http://localhost:8080/api/users/all').then((response) => {
+    const email = localStorage.getItem('Email');
+    axios.get(`http://localhost:8080/api/users/getUser?email=${email}`).then((response) => {
       setUserData(response.data);
     });
 
     // Fetch booked itineraries
-    axios.get('http://localhost:8080/api/tours').then((response) => {
-      setItineraries(response.data);
-    });
+    // axios.get('http://localhost:8080/api/tours').then((response) => {
+    //   setItineraries(response.data);
+    // });
 
     // Fetch hotel bookings
-    axios.get('http://localhost:8080/api/bookings').then((response) => {
-      setHotelBookings(response.data);
-    });
+    // axios.get('http://localhost:8080/api/bookings').then((response) => {
+    //   setHotelBookings(response.data);
+    // });
   }, []);
 
-  const handleLogout = () => {
+  const handleLogout = () => 
+  {
     localStorage.removeItem('accessToken');
     window.location.href = '/login'; // You may consider using React Router for navigation
   };
@@ -35,7 +37,7 @@ const UserProfile = () => {
         <h1>User Profile</h1>
         {userData && (
           <div>
-            <h2>{userData.username}</h2>
+            <h2>{userData.name}</h2>
             <p>Email: {userData.email}</p>
             {/* Display other user details */}
           </div>
