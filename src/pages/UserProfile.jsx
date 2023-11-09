@@ -1,89 +1,66 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import UserLayout from "../components/Layout/UserLayout"; // Import UserHeader component
-// import '../styles/UserProfileStyles.css'; // Import UserProfile styles
+import UserLayout from '../components/Layout/UserLayout';
 
 const UserProfile = () => {
   const [userData, setUserData] = useState(null);
-  const [bookedTours, setBookedTours] = useState([]);
-  const [bookedHotels, setBookedHotels] = useState([]);
+  const [itineraries, setItineraries] = useState([]);
+  const [hotelBookings, setHotelBookings] = useState([]);
 
   useEffect(() => {
-    // Fetch user data using the stored access token
-    const accessToken = localStorage.getItem('accessToken');
-    axios.get('http://localhost:8080/api/users/me', {
-      headers: {
-        Authorization: `Bearer ${accessToken}`
-      }
-    })
-    .then(response => {
+    // Fetch user data
+    axios.get('http://localhost:8080/api/users/all').then((response) => {
       setUserData(response.data);
-    })
-    .catch(error => {
-      console.error('Error fetching user data:', error);
-      // Handle errors, e.g., redirect to login page if token is invalid/expired
     });
 
-    // Fetch user's booked tours
-    axios.get('http://localhost:8080/api/users/bookedTours', {
-      headers: {
-        Authorization: `Bearer ${accessToken}`
-      }
-    })
-    .then(response => {
-      setBookedTours(response.data);
-    })
-    .catch(error => {
-      console.error('Error fetching booked tours:', error);
+    // Fetch booked itineraries
+    axios.get('http://localhost:8080/api/tours').then((response) => {
+      setItineraries(response.data);
     });
 
-    // Fetch user's booked hotels
-    axios.get('http://localhost:8080/api/users/bookedHotels', {
-      headers: {
-        Authorization: `Bearer ${accessToken}`
-      }
-    })
-    .then(response => {
-      setBookedHotels(response.data);
-    })
-    .catch(error => {
-      console.error('Error fetching booked hotels:', error);
+    // Fetch hotel bookings
+    axios.get('http://localhost:8080/api/bookings').then((response) => {
+      setHotelBookings(response.data);
     });
-  }, []); // Empty dependency array ensures the effect runs once after the initial render
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('accessToken');
+    window.location.href = '/login'; // You may consider using React Router for navigation
+  };
 
   return (
-    <div className="user-profile-container">
-      <UserLayout> 
-      {userData ? (
-        <div className="user-profile-content">
-          <div className="user-details">
-            <h2>Welcome, {userData.name}!</h2>
+    <UserLayout>
+      <div className="user-profile">
+        <h1>User Profile</h1>
+        {userData && (
+          <div>
+            <h2>{userData.username}</h2>
             <p>Email: {userData.email}</p>
-            {/* Display more user-specific information here */}
+            {/* Display other user details */}
           </div>
-          <div className="booked-tours">
-            <h3>Booked Tours:</h3>
-            <ul>
-              {bookedTours.map(tour => (
-                <li key={tour.id}>{tour.name}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="booked-hotels">
-            <h3>Booked Hotels:</h3>
-            <ul>
-              {bookedHotels.map(hotel => (
-                <li key={hotel.id}>{hotel.name}</li>
-              ))}
-            </ul>
-          </div>
+        )}
+
+        <div>
+          <h2>Booked Itineraries</h2>
+          <ul>
+            {itineraries.map((itinerary) => (
+              <li key={itinerary.id}>{itinerary.title}</li>
+            ))}
+          </ul>
         </div>
-      ) : (
-        <p>Logout</p>
-      )}
+
+        <div>
+          <h2>Hotel Bookings</h2>
+          <ul>
+            {hotelBookings.map((booking) => (
+              <li key={booking.id}>{booking.hotelName}</li>
+            ))}
+          </ul>
+        </div>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
     </UserLayout>
-    </div>
   );
 };
 
