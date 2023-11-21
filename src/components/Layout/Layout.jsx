@@ -1,10 +1,15 @@
 import React from "react";
-import Header from "./Header";
-const Layout = ({ children }) => {
+
+import Header from "../Header/Header";
+import Routers from "../../router/Routers";
+import Footer from "../Footer/Footer";
+
+const Layout = () => {
   return (
     <>
       <Header />
-      <div>{children}</div>
+      <Routers />
+      <Footer />
     </>
   );
 };

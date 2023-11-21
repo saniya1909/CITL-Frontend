@@ -1,0 +1,119 @@
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.home{
+  background-image:url('../assets/images/background.jpg');
+  background-size: cover;
+}
+
+.hero-content img {
+  width: 2rem;
+  height: 2.3rem;
+}
+.row {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.left {
+  flex: 1;
+  margin: 50px;;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgba(254, 254, 254, 0.7);
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 10px; /* Add border-radius for a rounded look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
+}
+.highlight {
+  color: var(--primary-color);
+}
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  /* padding: 10px; */
+}
+.hero-img-box img,
+.hero-img-box video {
+  width: 90%;
+  height: 300px;
+  border-radius: 20px;
+  border: 1px solid var(--secondary-color);
+  object-fit: cover;
+}
+
+/* Service Section  */
+.services {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(211, 211, 211, 0.712);
+  padding: 20px;
+}
+.service{
+  padding: 0%;
+}
+.service-subtitle {
+  color: #ee6e6e;
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: var(--subtitle-font-name);
+}
+
+/* Featured Products  */
+.features{
+  background-image: url('../assets/images/tour-img03.jpg');
+  background-size:cover;
+}
+.featurePro {
+  margin: 0 20px;
+}
+.featureLeft {
+  margin-left: 15px;
+}
+.featuredWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+/* Experience section  */
+.exp{
+  background-image: url('../assets/images/tour-img05.jpg');
+  background-size:cover;
+}
+.experience {
+  margin: 10px 50px;
+  transform: scale(0.8);
+}
+.expBtnWrap {
+  display: flex;
+  justify-content: space-between;
+}
+.expbtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.expbtn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  width: 60px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 15px 5px 15px 5px;
+  background-color: var(--primary-color);
+}
+.newsletter{
+  padding: 0%;
+}

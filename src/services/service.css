@@ -1,0 +1,11 @@
+.service-item {
+  padding: 20px;
+  width: 290px;
+}
+
+.service-item img {
+  background-color: var(--primary-color);
+  width: 50px;
+  padding: 10px;
+  border-radius: 50%;
+}
